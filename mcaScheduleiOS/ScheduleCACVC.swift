@@ -20,7 +20,11 @@ public class ScheduleCACVC: UIViewController, UITableViewDelegate, UITableViewDa
     var dataSourceSubText = [String]()
     var heightNavigationBar: CGFloat = 0.0
     let conf = mcaManagerSession.getGeneralConfig()
-
+    /// Variable que almacena el RUT
+    var rut : String?
+    /// Variable que almacena el correo electrónico
+    var email : String?
+    var name : String?
     // MARK: - ViewControlelr Life Cycle
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -134,23 +138,26 @@ public class ScheduleCACVC: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   
         
-        /* if false == SessionSingleton.sharedInstance.isNetworkConnected() {
-         NotificationCenter.default.post(name: Observers.ObserverList.ShowOfflineMessage.name, object: nil);
-         return;
-         }
-         let webView = GenericWebViewVC()
-         if indexPath.row == 0{
-         webView.serviceSelected = "agendarCAC"
-         }else{
-         webView.serviceSelected = "horasCAC"
-         }
-         self.navigationController?.pushViewController(webView, animated: true)*/
-        
-        let webViewType = WebViewType.HelpCenters
-        let info = GenericWebViewModel(headerTitle: "Centros de Ayuda", serviceSelected: webViewType, loadUrl: "https://clarochile.custhelp.com/", buttonNavType: ButtonNavType.IconBack  , reloadUrlSuccess:  nil, paidUrlSucces: nil)
-        mcaUtilsHelper.initGenericWebView(navController: self.navigationController, info: info)
-        
+        rut = mcaManagerSession.getCurrentSession()?.retrieveProfileInformationResponse?.personalDetailsInformation?.rUT ?? ""
+        email = mcaManagerSession.getCurrentSession()?.retrieveProfileInformationResponse?.contactMethods?.first?.emailContactMethodDetail?.emailAddress ?? ""
+        name = mcaManagerSession.getCurrentSession()?.retrieveProfileInformationResponse?.personalDetailsInformation?.accountUserFirstName ?? ""
+
+        if indexPath.row == 0{
+            AnalyticsInteractionSingleton.sharedInstance.ADBTrackCustomLink(viewName: "Soporte|Agendar citas en CAC:Agendar cita")
+            let webViewType = WebViewType.ScheduleCAC
+            let urlString = (conf?.webViews?[1].url ?? "https://reservaweb.clarochile.cl/agenda/asp/par_sel.asp").replacingOccurrences(of: " ", with: "") + "?rut=\(rut!)&correo=\(email!)&nombre=\(name!)&tiempo=\(10)"
+            let info = GenericWebViewModel(headerTitle: "Agendar Hora", serviceSelected: webViewType, loadUrl: urlString, buttonNavType: ButtonNavType.IconBack  , reloadUrlSuccess:  nil, paidUrlSucces: nil)
+            mcaUtilsHelper.initGenericWebView(navController: self.navigationController, info: info)
+            
+        }
+        if indexPath.row == 1{
+            AnalyticsInteractionSingleton.sharedInstance.ADBTrackCustomLink(viewName: "Soporte|Agendar citas en CAC:Ver citas agendadas")
+            let webViewType = WebViewType.ScheduleCAC
+            let info = GenericWebViewModel(headerTitle: "Citas Agendadas", serviceSelected: webViewType, loadUrl: conf?.webViews?[2].url ?? "https://reservaweb.clarochile.cl/agenda/asp/hor_can.asp", buttonNavType: ButtonNavType.IconBack  , reloadUrlSuccess:  nil, paidUrlSucces: nil)
+            mcaUtilsHelper.initGenericWebView(navController: self.navigationController, info: info)
+        }
     }
     // MARK: - Target Actions
 
