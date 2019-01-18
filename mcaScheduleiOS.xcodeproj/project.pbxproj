@@ -22,8 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1D0378D921E92AAD00F70AF5 /* mcaManageriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0378D821E92AAD00F70AF5 /* mcaManageriOS.framework */; };
 		1D0379EA21ED401600F70AF5 /* Pods_mcaScheduleiOS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B62A5775A431D790854C3BA9 /* Pods_mcaScheduleiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1D373EF221F2864200168BF4 /* mcaManageriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D373EF121F2864200168BF4 /* mcaManageriOS.framework */; };
 		6C9373C2C67FEAC8646C83F2 /* Pods_mcaScheduleiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B62A5775A431D790854C3BA9 /* Pods_mcaScheduleiOS.framework */; };
 		7B553D1721D53E6800AE6708 /* mcaScheduleiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B553D1521D53E6800AE6708 /* mcaScheduleiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B553D1E21D5438A00AE6708 /* ScheduleCACVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B553D1D21D5438A00AE6708 /* ScheduleCACVC.swift */; };
@@ -44,7 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1D0378D821E92AAD00F70AF5 /* mcaManageriOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = mcaManageriOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D373EF121F2864200168BF4 /* mcaManageriOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = mcaManageriOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B553D1221D53E6800AE6708 /* mcaScheduleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = mcaScheduleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B553D1521D53E6800AE6708 /* mcaScheduleiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcaScheduleiOS.h; sourceTree = "<group>"; };
 		7B553D1621D53E6800AE6708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D0378D921E92AAD00F70AF5 /* mcaManageriOS.framework in Frameworks */,
+				1D373EF221F2864200168BF4 /* mcaManageriOS.framework in Frameworks */,
 				6C9373C2C67FEAC8646C83F2 /* Pods_mcaScheduleiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,7 +115,7 @@
 		82A775694ED4B85E37D2FE95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D0378D821E92AAD00F70AF5 /* mcaManageriOS.framework */,
+				1D373EF121F2864200168BF4 /* mcaManageriOS.framework */,
 				B62A5775A431D790854C3BA9 /* Pods_mcaScheduleiOS.framework */,
 			);
 			name = Frameworks;
@@ -352,10 +352,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -415,6 +416,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PRODUCCION;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -425,7 +427,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CA5585CD54D8FCD19AE4D07 /* Pods-mcaScheduleiOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -456,7 +458,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A42CEAE3DD55BC26BB34DB24 /* Pods-mcaScheduleiOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
