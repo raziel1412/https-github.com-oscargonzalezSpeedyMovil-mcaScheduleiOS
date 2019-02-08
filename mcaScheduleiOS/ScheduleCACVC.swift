@@ -149,14 +149,14 @@ public class ScheduleCACVC: UIViewController, UITableViewDelegate, UITableViewDa
             let webViewType = WebViewType.ScheduleCAC
             let urlString = (conf?.webViews?[1].url ?? "https://reservaweb.clarochile.cl/agenda/asp/par_sel.asp").replacingOccurrences(of: " ", with: "") + "?rut=\(rut!)&correo=\(email!)&nombre=\(name!)&tiempo=\(10)"
             let info = GenericWebViewModel(headerTitle: "Agendar Hora", serviceSelected: webViewType, loadUrl: urlString, buttonNavType: ButtonNavType.IconBack  , reloadUrlSuccess:  nil, paidUrlSucces: nil)
-            mcaUtilsHelper.initGenericWebView(navController: self.navigationController, info: info)
+            self.navigationController?.pushViewController(GenericWebViewVC(info: info), animated: true)
             
         }
         if indexPath.row == 1{
             AnalyticsInteractionSingleton.sharedInstance.ADBTrackCustomLink(viewName: "Soporte|Agendar citas en CAC:Ver citas agendadas")
             let webViewType = WebViewType.ScheduleCAC
             let info = GenericWebViewModel(headerTitle: "Citas Agendadas", serviceSelected: webViewType, loadUrl: conf?.webViews?[2].url ?? "https://reservaweb.clarochile.cl/agenda/asp/hor_can.asp", buttonNavType: ButtonNavType.IconBack  , reloadUrlSuccess:  nil, paidUrlSucces: nil)
-            mcaUtilsHelper.initGenericWebView(navController: self.navigationController, info: info)
+            self.navigationController?.pushViewController(GenericWebViewVC(info: info), animated: true)
         }
     }
     // MARK: - Target Actions
