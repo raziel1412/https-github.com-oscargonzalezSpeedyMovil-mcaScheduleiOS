@@ -12,7 +12,6 @@
 			buildConfigurationList = 1D03794121ECF6E300F70AF5 /* Build configuration list for PBXAggregateTarget "mcaScheduleiOSUniversal" */;
 			buildPhases = (
 				1D03795021ECF7A500F70AF5 /* ShellScript */,
-				1D809EA12214E91100DF5303 /* CopyFiles */,
 			);
 			dependencies = (
 			);
@@ -22,47 +21,22 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1D809EA22214E91700DF5303 /* BuildFile in CopyFiles */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1D809EC62215CB2600DF5303 /* BuildFile in CopyFiles */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1D8C3B8321F934F1005DBA39 /* mcaManageriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D8C3B8221F934F1005DBA39 /* mcaManageriOS.framework */; };
 		7B553D1721D53E6800AE6708 /* mcaScheduleiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B553D1521D53E6800AE6708 /* mcaScheduleiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B553D1E21D5438A00AE6708 /* ScheduleCACVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B553D1D21D5438A00AE6708 /* ScheduleCACVC.swift */; };
 		7B553D1F21D544FA00AE6708 /* ScheduleCACVC.swift in Headers */ = {isa = PBXBuildFile; fileRef = 7B553D1D21D5438A00AE6708 /* ScheduleCACVC.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFDD720E7090799921E3AAC2 /* Pods_mcaScheduleiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039FE5BB046C6F03EEC14BFD /* Pods_mcaScheduleiOS.framework */; };
+		9A55884841B90DB91F925542 /* Pods_mcaScheduleiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F087DE130639BA70212C9C41 /* Pods_mcaScheduleiOS.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1D809EA12214E91100DF5303 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1D809EA22214E91700DF5303 /* BuildFile in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D809EC52215CB1E00DF5303 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				1D809EC62215CB2600DF5303 /* BuildFile in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		039FE5BB046C6F03EEC14BFD /* Pods_mcaScheduleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mcaScheduleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8C3B8221F934F1005DBA39 /* mcaManageriOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = mcaManageriOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D20DC9E06CB261E2513EA5C /* Pods-mcaScheduleiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mcaScheduleiOS.release.xcconfig"; path = "../mcaUtilsiOS/Pods/Pods/Target Support Files/Pods-mcaScheduleiOS/Pods-mcaScheduleiOS.release.xcconfig"; sourceTree = "<group>"; };
+		46FD1339398ABD3FB648E419 /* Pods-mcaScheduleiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mcaScheduleiOS.debug.xcconfig"; path = "../mcaUtilsiOS/Pods/Pods/Target Support Files/Pods-mcaScheduleiOS/Pods-mcaScheduleiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7B553D1221D53E6800AE6708 /* mcaScheduleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = mcaScheduleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B553D1521D53E6800AE6708 /* mcaScheduleiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mcaScheduleiOS.h; sourceTree = "<group>"; };
 		7B553D1621D53E6800AE6708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B553D1D21D5438A00AE6708 /* ScheduleCACVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCACVC.swift; sourceTree = "<group>"; };
-		BAF375C916AF1B5653F3F24E /* Pods-mcaScheduleiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mcaScheduleiOS.debug.xcconfig"; path = "../mcaUtilsiOS/Pods/Pods/Target Support Files/Pods-mcaScheduleiOS/Pods-mcaScheduleiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		91D73D8053CDC3B0A5C01C8E /* Pods-mcaScheduleiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mcaScheduleiOS.release.xcconfig"; path = "../mcaUtilsiOS/Pods/Pods/Target Support Files/Pods-mcaScheduleiOS/Pods-mcaScheduleiOS.release.xcconfig"; sourceTree = "<group>"; };
+		F087DE130639BA70212C9C41 /* Pods_mcaScheduleiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mcaScheduleiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,29 +45,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8C3B8321F934F1005DBA39 /* mcaManageriOS.framework in Frameworks */,
-				CFDD720E7090799921E3AAC2 /* Pods_mcaScheduleiOS.framework in Frameworks */,
+				9A55884841B90DB91F925542 /* Pods_mcaScheduleiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		669BB1B2A8277BA9D73AD02E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BAF375C916AF1B5653F3F24E /* Pods-mcaScheduleiOS.debug.xcconfig */,
-				3D20DC9E06CB261E2513EA5C /* Pods-mcaScheduleiOS.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		7B553D0821D53E6800AE6708 = {
 			isa = PBXGroup;
 			children = (
 				7B553D1421D53E6800AE6708 /* mcaScheduleiOS */,
 				7B553D1321D53E6800AE6708 /* Products */,
 				82A775694ED4B85E37D2FE95 /* Frameworks */,
-				669BB1B2A8277BA9D73AD02E /* Pods */,
+				ED6F09E985B27D9D8785A55E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,9 +92,18 @@
 			isa = PBXGroup;
 			children = (
 				1D8C3B8221F934F1005DBA39 /* mcaManageriOS.framework */,
-				039FE5BB046C6F03EEC14BFD /* Pods_mcaScheduleiOS.framework */,
+				F087DE130639BA70212C9C41 /* Pods_mcaScheduleiOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED6F09E985B27D9D8785A55E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46FD1339398ABD3FB648E419 /* Pods-mcaScheduleiOS.debug.xcconfig */,
+				91D73D8053CDC3B0A5C01C8E /* Pods-mcaScheduleiOS.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,13 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B553D1A21D53E6800AE6708 /* Build configuration list for PBXNativeTarget "mcaScheduleiOS" */;
 			buildPhases = (
-				65FD444BCEE81FC5690F305D /* [CP] Check Pods Manifest.lock */,
+				28CF0029571F87650705B241 /* [CP] Check Pods Manifest.lock */,
 				7B553D0D21D53E6800AE6708 /* Headers */,
 				7B553D0E21D53E6800AE6708 /* Sources */,
 				7B553D0F21D53E6800AE6708 /* Frameworks */,
 				7B553D1021D53E6800AE6708 /* Resources */,
-				1D809EC52215CB1E00DF5303 /* CopyFiles */,
-				C21CEF6290DC985702AE150D /* [CP] Copy Pods Resources */,
+				E5C52F060EC2C236CE369A6C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,7 +201,7 @@
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\nPROD_NAME=mcaScheduleiOS\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROD_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Copy the framework structure to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROD_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\nif [ \"${SIMULATOR_AVAILABLE}\" = \"true\" ]; then\nxcodebuild -target \"${PROD_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n\n# Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROD_NAME}.framework/Modules/${PROD_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROD_NAME}.framework/Modules/${PROD_NAME}.swiftmodule\"\nfi\n\n# Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROD_NAME}.framework/${PROD_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROD_NAME}.framework/${PROD_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROD_NAME}.framework/${PROD_NAME}\"\n\n# Open the Universal output folder for convenience\n# open \"${UNIVERSAL_OUTPUTFOLDER}\"\nfi\n\n\n\n";
 		};
-		65FD444BCEE81FC5690F305D /* [CP] Check Pods Manifest.lock */ = {
+		28CF0029571F87650705B241 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,7 +219,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C21CEF6290DC985702AE150D /* [CP] Copy Pods Resources */ = {
+		E5C52F060EC2C236CE369A6C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -430,7 +403,7 @@
 		};
 		7B553D1B21D53E6800AE6708 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAF375C916AF1B5653F3F24E /* Pods-mcaScheduleiOS.debug.xcconfig */;
+			baseConfigurationReference = 46FD1339398ABD3FB648E419 /* Pods-mcaScheduleiOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -459,7 +432,7 @@
 		};
 		7B553D1C21D53E6800AE6708 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D20DC9E06CB261E2513EA5C /* Pods-mcaScheduleiOS.release.xcconfig */;
+			baseConfigurationReference = 91D73D8053CDC3B0A5C01C8E /* Pods-mcaScheduleiOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
