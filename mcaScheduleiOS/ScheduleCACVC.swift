@@ -147,15 +147,15 @@ public class ScheduleCACVC: UIViewController, UITableViewDelegate, UITableViewDa
         if indexPath.row == 0{
             AnalyticsInteractionSingleton.sharedInstance.ADBTrackCustomLink(viewName: "Soporte|Agendar citas en CAC:Agendar cita")
             let webViewType = WebViewType.ScheduleCAC
-            let urlString = (conf?.webViews?[1].url ?? "https://reservaweb.clarochile.cl/agenda/asp/par_sel.asp").replacingOccurrences(of: " ", with: "") + "?rut=\(rut!)&correo=\(email!)&nombre=\(name!)&tiempo=\(10)"
-            let info = GenericWebViewModel(headerTitle: "Agendar Hora", serviceSelected: webViewType, loadUrl: urlString, buttonNavType: ButtonNavType.IconBack  , reloadUrlSuccess:  nil, paidUrlSucces: nil)
+            let urlString = (conf?.webViews?[safe:1]?.url ?? "https://reservaweb.clarochile.cl/agenda/asp/par_sel.asp").replacingOccurrences(of: " ", with: "") + "?rut=\(rut!)&correo=\(email!)&nombre=\(name!)&tiempo=\(10)"
+            let info = GenericWebViewModel(headerTitle: conf?.translations?.data?.cacDatesTexts?.cacDatesHeader ?? "Agendar Hora", serviceSelected: webViewType, loadUrl: urlString, buttonNavType: ButtonNavType.IconBack  , reloadUrlSuccess:  nil, paidUrlSucces: nil)
             self.navigationController?.pushViewController(GenericWebViewVC(info: info), animated: true)
             
         }
         if indexPath.row == 1{
             AnalyticsInteractionSingleton.sharedInstance.ADBTrackCustomLink(viewName: "Soporte|Agendar citas en CAC:Ver citas agendadas")
             let webViewType = WebViewType.ScheduleCAC
-            let info = GenericWebViewModel(headerTitle: "Citas Agendadas", serviceSelected: webViewType, loadUrl: conf?.webViews?[2].url ?? "https://reservaweb.clarochile.cl/agenda/asp/hor_can.asp", buttonNavType: ButtonNavType.IconBack  , reloadUrlSuccess:  nil, paidUrlSucces: nil)
+            let info = GenericWebViewModel(headerTitle: conf?.translations?.data?.cacDatesTexts?.cacDatesViewDatesHeader ?? "Ver Citas Agendadas", serviceSelected: webViewType, loadUrl: conf?.webViews?[safe:2]?.url ?? "https://reservaweb.clarochile.cl/agenda/asp/hor_can.asp", buttonNavType: ButtonNavType.IconBack  , reloadUrlSuccess:  nil, paidUrlSucces: nil)
             self.navigationController?.pushViewController(GenericWebViewVC(info: info), animated: true)
         }
     }
