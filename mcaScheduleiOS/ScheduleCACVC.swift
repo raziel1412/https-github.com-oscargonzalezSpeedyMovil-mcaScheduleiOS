@@ -12,7 +12,7 @@ import mcaManageriOS
 
 public class ScheduleCACVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private var header : UIHeaderForm = UIHeaderForm(frame: .zero)
+    private lazy var header : UIHeaderForm = UIHeaderForm(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width, height: 200))
     private var frameTabBar = CGRect()
     var tableSchedule : UITableView!
     let vcLine = UIView()
@@ -116,20 +116,20 @@ public class ScheduleCACVC: UIViewController, UITableViewDelegate, UITableViewDa
     }
     ///Ajusta la altura de los header por seccion de las 3 tablas que se utilizan en las boletas
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 220.0
+        return 260
     }
     
     ///Creacion del header donde se escuentra la tabla con los tipos de opciones que tiene el usuario asignado
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200))
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 260))
         headerView.backgroundColor = institutionalColors.claroWhiteColor
         
         header.setupElements(imageName: "icon_seccion_soporte_centros", title: mcaManagerSession.getGeneralConfig()?.translations?.data?.cacDatesTexts?.cacDatesTitle ?? "¿Necesitas ir a una sucursal?", subTitle:  mcaManagerSession.getGeneralConfig()?.translations?.data?.cacDatesTexts?.cacDatesDescription ?? "Agenda una hora en tu sucursal más cercana, te ayudaremos a resolver tus dudas")
         
-        header.frame = CGRect(x: 0.0, y: 0.0, width: self.tableSchedule.frame.width, height: headerView.frame.height)
+        header.frame = CGRect(x: 0.0, y: 0.0, width: self.tableSchedule.frame.width, height: self.header.getHeight())
         headerView.addSubview(header)
         vcLine.backgroundColor = institutionalColors.claroBlackColor
-        vcLine.frame = CGRect(x: 0.0, y: headerView.frame.maxY + 15 , width: 100.0, height: 1)
+        vcLine.frame = CGRect(x: 0.0, y: headerView.frame.maxY , width: 100.0, height: 1)
         vcLine.center = CGPoint(x: UIScreen.main.bounds.width/2.0, y: vcLine.center.y)
         vcLine.sizeToFit()
         headerView.addSubview(vcLine)
